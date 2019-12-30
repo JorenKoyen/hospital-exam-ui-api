@@ -1,0 +1,8 @@
+{
+  "watch": [
+    "generator.js",
+    "routes.json",
+    "server.js"
+  ],
+  "exec": "node server.js"
+}

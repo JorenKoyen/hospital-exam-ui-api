@@ -1,0 +1,17 @@
+{
+  "name": "hospital-api",
+  "version": "1.0.0",
+  "description": "json api for hospital front end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "author": "Joren K.",
+  "license": "ISC",
+  "dependencies": {
+    "faker": "^4.1.0",
+    "json-server": "^0.15.1",
+    "nodemon": "^2.0.2"
+  }
+}

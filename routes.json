@@ -1,0 +1,4 @@
+{
+  "/departments/:id/rooms": "/rooms?department=:id",
+  "/departments/:id/hospitalizations": "/hospitalizations?department=:id&_expand=room&_expand=doctor&_expand=patient"
+}

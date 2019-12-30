@@ -1,0 +1,85 @@
+{
+  "patients": [
+    {
+      "ssn": "024-66-3152",
+      "name": "Henry Cavill",
+      "avatar": "/henry.png",
+      "vegetarian": "true",
+      "notes": "none"
+    },
+    {
+      "ssn": "218-42-1813",
+      "name": "Freya Allan",
+      "avatar": "/freya.png",
+      "vegetarian": "false",
+      "notes": "none"
+    },
+    {
+      "ssn": "593-17-3105",
+      "name": "Anya Chalotra",
+      "avatar": "/anya.png",
+      "vegetarian": "true",
+      "notes": "none"
+    },
+    {
+      "ssn": "751-14-0613",
+      "name": "Mimi Ndiweni",
+      "avatar": "/mimi.png",
+      "vegetarian": "false",
+      "notes": "none"
+    },
+    {
+      "ssn": "401-20-7036",
+      "name": "Eamon Farren",
+      "avatar": "/eamon.png",
+      "vegetarian": "false",
+      "notes": "none"
+    },
+    {
+      "ssn": "002-42-2200",
+      "name": "MyAnna Buring",
+      "avatar": "/myanna.png",
+      "vegetarian": "true",
+      "notes": "none"
+    }
+  ],
+  "rooms": [
+    {
+      "number": "205A",
+      "facilities": [
+        "shower",
+        "toilet",
+        "tv"
+      ]
+    },
+    {
+      "number": "205B",
+      "facilities": [
+        "toilet",
+        "tv"
+      ]
+    },
+    {
+      "number": "206A",
+      "facilities": [
+        "toilet",
+        "shower",
+        "childsupport"
+      ]
+    },
+    {
+      "number": "206B",
+      "facilities": [
+        "toilet",
+        "shower",
+        "tv"
+      ]
+    },
+    {
+      "number": "207A",
+      "facilities": [
+        "toilet"
+      ]
+    }
+  ]
+}
