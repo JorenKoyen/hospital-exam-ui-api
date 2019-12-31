@@ -16,18 +16,13 @@ function randomFacilitiesHelper (amount) {
   return rndFac;
 }
 
-function randomRGB () {
-  const red = faker.random.number({ min: 0, max: 255 });
-  const green = faker.random.number({ min: 0, max: 255 });
-  const blue = faker.random.number({ min: 0, max: 255 });
-  return `rgb(${red},${green},${blue})`;
-}
+function genUniqueNumberInRange (state = [], min, max) {
+  let number;
+  do {
+    number = faker.random.number({ min, max });
+  } while (state.includes(number));
 
-function randomHSL () {
-  const hue = faker.random.number({ min: 0, max: 360 });
-  const sat = faker.random.number({ min: 50, max: 100 });
-
-  return `hsl(${hue},${sat}%,60%)`
+  return number;
 }
 
 module.exports = () => {
@@ -57,7 +52,16 @@ module.exports = () => {
       name: faker.name.findName(),
       avatar: faker.internet.avatar(),
       vegetarian: faker.random.boolean(),
-      notes: "none"
+      notes: "none",
+      contact: {
+        zip: faker.address.zipCode(),
+        city: faker.address.city(),
+        street: faker.address.streetName(),
+        address: faker.address.streetAddress(),
+        country: faker.address.country(),
+        email: faker.internet.email(),
+        phone: faker.phone.phoneNumber()
+      }
     });
   }
 
@@ -73,14 +77,20 @@ module.exports = () => {
 
   // create rooms
   data.rooms = [];
+  const numberState = [];
   for (let i = 0; i < noRooms; i++) {
+    const dep = deps[faker.random.number(deps.length - 1)];
+    const minNumber = dep.level * 100;
+    const number = genUniqueNumberInRange(numberState, minNumber, minNumber + 99);
     data.rooms.push({
       id: faker.random.uuid(),
-      number: faker.random.number({ min: 100, max: 399 }),
-      department: deps[faker.random.number(deps.length - 1)].name,
+      number,
+      department: dep.name,
       request: false,
       facilities: randomFacilitiesHelper(faker.random.number({ min: 0, max: 4 }))
     });
+
+    numberState.push(number);
   }
 
   // create departments

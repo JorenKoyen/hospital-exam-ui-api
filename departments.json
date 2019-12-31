@@ -1,22 +1,27 @@
 [
   {
     "name": "emergency",
-    "color": "hsl(168,76%,42%)"
+    "color": "hsl(168,76%,42%)",
+    "level": "1"
   },
   {
     "name": "internal",
-    "color": "hsl(204,70%,53%)"
+    "color": "hsl(204,70%,53%)",
+    "level": "2"
   },
   {
     "name": "surgery",
-    "color": "hsl(48,89%,50%)"
+    "color": "hsl(48,89%,50%)",
+    "level": "3"
   },
   {
     "name": "infectious",
-    "color": "hsl(283,39%,53%)"
+    "color": "hsl(283,39%,53%)",
+    "level": "4"
   },
   {
     "name": "cardiology",
-    "color": "hsl(28,80%,52%)"
+    "color": "hsl(28,80%,52%)",
+    "level": "5"
   }
 ]
