@@ -1,8 +1,26 @@
 [
-  "medication",
-  "injection",
-  "iv",
-  "meal",
-  "wash",
-  "bedsore"
+  {
+    "name": "medication",
+    "icon": "fas fa-pills"
+  },
+  {
+    "name": "injection",
+    "icon": "fas fa-syringe"
+  },
+  {
+    "name": "iv",
+    "icon": "fas fa-vial"
+  },
+  {
+    "name": "meal",
+    "icon": "fas fa-utensils"
+  },
+  {
+    "name": "wash",
+    "icon": "fas fa-bath"
+  },
+  {
+    "name": "bedsore",
+    "icon": "fas fa-prodedures"
+  }
 ]

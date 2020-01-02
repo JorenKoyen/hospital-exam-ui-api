@@ -52,7 +52,6 @@ module.exports = () => {
       name: faker.name.findName(),
       avatar: faker.internet.avatar(),
       vegetarian: faker.random.boolean(),
-      notes: "none",
       contact: {
         zip: faker.address.zipCode(),
         city: faker.address.city(),
@@ -71,7 +70,8 @@ module.exports = () => {
     data.doctors.push({
       id: faker.random.uuid(),
       name: faker.name.findName(),
-      avatar: faker.internet.avatar()
+      avatar: faker.internet.avatar(),
+      hiredOn: faker.date.past(45).getTime()
     });
   }
 
@@ -128,7 +128,10 @@ module.exports = () => {
     });
   }
 
+  // create types
   const types = require('./action_types.json');
+  data.types = types.map(t => ({ id: t.name, icon: t.icon }))
+
   const meds = require('./medications.json');
   const descriptionNeededTypes = ['medication', 'injection', 'iv']
 
@@ -144,8 +147,8 @@ module.exports = () => {
       hospitalizationId: hops.id,
       timestamp: faker.date.recent(-1).getTime(),
       completed: false,
-      type,
-      description: descriptionNeededTypes.includes(type) ? `Administer ${faker.random.number({ min: 1, max: 100 })}mg of ${med}` : undefined
+      typeId: type.name,
+      description: descriptionNeededTypes.includes(type.name) ? `Administer ${faker.random.number({ min: 1, max: 100 })}mg of ${med}` : undefined
     });
 
   }
