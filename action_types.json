@@ -1,26 +1,32 @@
 [
   {
     "name": "medication",
-    "icon": "fas fa-pills"
+    "icon": "fas fa-pills",
+    "color": "#f9ca24"
   },
   {
     "name": "injection",
-    "icon": "fas fa-syringe"
+    "icon": "fas fa-syringe",
+    "color": "#f0932b"
   },
   {
     "name": "iv",
-    "icon": "fas fa-vial"
+    "icon": "fas fa-vial",
+    "color": "#eb4d4b"
   },
   {
     "name": "meal",
-    "icon": "fas fa-utensils"
+    "icon": "fas fa-utensils",
+    "color": "#6ab04c"
   },
   {
     "name": "wash",
-    "icon": "fas fa-bath"
+    "icon": "fas fa-bath",
+    "color": "#4834d4"
   },
   {
     "name": "bedsore",
-    "icon": "fas fa-prodedures"
+    "icon": "fas fa-procedures",
+    "color": "#22a6b3"
   }
 ]

@@ -28,7 +28,7 @@ function genUniqueNumberInRange (state = [], min, max) {
 module.exports = () => {
 
   const noPatients = 100;
-  const noActions = 1000;
+  const noActions = 200;
   const noDoctors = 25;
   const noRooms = 100;
   const deps = require('./departments.json');
@@ -130,7 +130,7 @@ module.exports = () => {
 
   // create types
   const types = require('./action_types.json');
-  data.types = types.map(t => ({ id: t.name, icon: t.icon }))
+  data.types = types.map(t => ({ id: t.name, ...t, name: undefined }))
 
   const meds = require('./medications.json');
   const descriptionNeededTypes = ['medication', 'injection', 'iv']
