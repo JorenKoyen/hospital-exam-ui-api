@@ -2,7 +2,8 @@
   "watch": [
     "generator.js",
     "routes.json",
-    "server.js"
+    "server.js",
+    "floorplan-generator.js"
   ],
   "exec": "node server.js"
 }

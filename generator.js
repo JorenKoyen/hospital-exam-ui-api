@@ -25,22 +25,24 @@ function genUniqueNumberInRange (state = [], min, max) {
   return number;
 }
 
-module.exports = () => {
+const hospitalizationReasons = [
+  'Cardiac arrhythmias',
+  'Congestive heart failure',
+  'Diabetes',
+  'Infection',
+  'Medication problems',
+  'Pneumonia',
+  'Stroke'
+]
+
+const generator = () => {
 
   const noPatients = 100;
   const noActions = 200;
   const noDoctors = 25;
   const noRooms = 100;
   const deps = require('./departments.json');
-  const hospitalizationReasons = [
-    'Cardiac arrhythmias',
-    'Congestive heart failure',
-    'Diabetes',
-    'Infection',
-    'Medication problems',
-    'Pneumonia',
-    'Stroke'
-  ]
+
   const data = {};
 
   // create patients
@@ -128,6 +130,10 @@ module.exports = () => {
     });
   }
 
+  // create custom department with floorplan
+  const floorplanGenerator = require('./floorplan-generator.js');
+  floorplanGenerator(data);
+
   // create types
   const types = require('./action_types.json');
   data.types = types.map(t => ({ id: t.name, ...t, name: undefined }))
@@ -154,4 +160,10 @@ module.exports = () => {
   }
 
   return data;
+}
+
+module.exports = {
+  facilities: randomFacilitiesHelper,
+  generator: generator,
+  reasons: hospitalizationReasons
 }

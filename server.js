@@ -3,7 +3,7 @@ const generator = require('./generator');
 const faker = require('faker');
 
 // generate fake data 
-const data = generator();
+const data = generator.generator();
 
 // setup json server
 const server = jsonServer.create();
